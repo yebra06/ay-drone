@@ -9,7 +9,7 @@ TARGET 		= aydrone
 CSRCS 		= $(wildcard *.c)
 
 # -------------------- Object files --------------------
-OBJS 			= $(CSRCS:.c=.o)
+OBJS		= $(CSRCS:.c=.o)
 OBJCOPY 	= avr-objcopy
 OBJDUMP 	= avr-objdump
 
@@ -31,8 +31,8 @@ PORT 		= /dev/cu.usbserial-A5047M09
 # 	-b: Baud rate
 # 	-c: Programmer
 # 	-D: Disable erase cycle
-AVR_TOOLS 			= $(ARDUINO)/tools/avr/bin
-AVRDUDE 			= $(AVR_TOOLS)/avrdude
+AVR_TOOLS			= $(ARDUINO)/tools/avr/bin
+AVRDUDE				= $(AVR_TOOLS)/avrdude
 AVRDUDE_PROGRAMMER 	= arduino
 AVRDUDE_FLAGS		= -v -v -p $(MCU) -P $(PORT) -b $(BAUD) -c $(AVRDUDE_PROGRAMMER) -D
 AVRDUDE_CONF		= -C "$(ARDUINO)/tools/avr/etc/avrdude.conf"
